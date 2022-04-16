@@ -1,0 +1,180 @@
+:root {
+  /* --primary-color: #3e5151;
+  --secondary-color: #1f4037; */
+  --primary-color: #2f304f;
+  --primary-color: #212d3e;
+  --secondary-color: #2f4f4f;
+  --tertiary-color: #f5e6d3;
+  --fuzzy-color: #d16666;
+
+  --clear: transparent;
+  --light: #eee;
+  --dark: #000;
+  --grey: #cecece;
+  --blue: #3aa7b1;
+  --green: #38b593;
+  --yellow: #f9c73f;
+  --red: #ad2831;
+
+  /*  */
+  --backgroundImage: url(./../images/LoginPage.jpg);
+}
+
+/*  */
+* {
+  box-sizing: border-box;
+}
+
+/*  */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-color: var(--tertiary-color);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.gradient {
+  background: #093028; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #237a57,
+    #093028
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #237a57,
+    #093028
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.overlay {
+  position: absolute;
+  background-color: inherit;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.8;
+  z-index: -1;
+}
+
+.form {
+  padding: 0.4rem 1rem 0rem 1rem;
+  margin: auto;
+  width: 100%;
+  height: fit-content;
+  border: none;
+}
+.input {
+  position: relative;
+  display: block;
+  min-width: 65%;
+  max-width: 90%;
+  height: fit-content;
+  border-radius: 2rem;
+  padding: 0.8rem 0.8rem 0.8rem 30px;
+  margin: 10px auto;
+  border: none;
+  font-size: 12px;
+  font-weight: 530;
+  overflow: hidden;
+  color: var(--primary-color);
+  background-color: var(--grey);
+  box-sizing: border-box;
+}
+.input:hover,
+.input:active,
+.input:focus {
+  outline: 1px solid var(--tertiary-color);
+}
+.button {
+  position: relative;
+  display: block;
+  border-radius: 2rem;
+  padding: 1rem 3.5rem;
+  margin: 1rem auto;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--dark);
+  text-transform: uppercase;
+  overflow: hidden;
+  outline: none;
+  cursor: pointer;
+  color: inherit;
+  font-weight: 530;
+  box-sizing: border-box;
+  transition: transform 0.2s;
+}
+.form .button {
+  max-width: 90%;
+  padding: 1rem 4rem;
+}
+.button:active {
+  transform: scale(0.9);
+}
+.form .forgotPassword {
+  text-align: center;
+  color: inherit;
+  font-size: 13px;
+  margin: 15px auto;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.container {
+  height: fit-content;
+  margin: auto;
+  width: calc(100% - 4rem);
+  width: 90%;
+}
+
+.row {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+}
+
+.nowrap {
+  flex-wrap: nowrap;
+}
+
+.row > [class^='col'] {
+  background-color: transparent;
+}
+
+.col {
+  width: 50%;
+}
+
+.dropdown {
+  z-index: 1000;
+}
+.sticky {
+  z-index: 1020;
+}
+.fixed {
+  z-index: 1030;
+}
+.modal-backdrop {
+  z-index: 1040;
+}
+.modal {
+  z-index: 1050;
+}
+.popover {
+  z-index: 1060;
+}
+.tooltip {
+  z-index: 1070;
+}

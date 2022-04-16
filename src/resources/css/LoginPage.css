@@ -1,0 +1,257 @@
+:root {
+  --backgroundImage: url(./../images/LoginPage.jpg);
+}
+
+#loginPage {
+  background-image: var(--backgroundImage);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+  display: flex;
+  align-items: center;
+}
+
+/*  */
+.loginContent {
+  position: relative;
+  background-color: var(--light);
+  height: 400px;
+  /* height: max-content; */
+  min-height: 90vmin;
+  max-height: 90vmax;
+  min-width: 65%;
+  width: 500px;
+  max-width: 98%;
+  margin: auto;
+  padding: 0;
+  border-radius: 15px;
+  box-shadow: 2px 2px 20px var(--grey);
+  color: var(--light);
+  overflow: hidden;
+  /* opacity: 0; */
+}
+
+/*  */
+.loginContent h1 {
+  color: inherit;
+  text-transform: uppercase;
+  font-size: 4.2vmin;
+  font-weight: bold;
+}
+.loginContent p {
+  color: inherit;
+  font-size: 0.8rem;
+}
+
+/*  */
+.loginContent .contentHeader {
+  position: absolute;
+  height: fit-content;
+  width: 100%;
+  padding: 0;
+  padding: 10px 0px 5px 1.5rem;
+  display: flex;
+  align-items: center;
+  color: var(--light);
+  z-index: 2;
+  transition: color 3s;
+}
+.loginContent.switch .contentHeader {
+  color: var(--primary-color);
+}
+.loginContent .contentHeader .App-logo {
+  height: 30px;
+  margin-right: 5px;
+}
+
+/*  */
+.loginContent .slideTop,
+.loginContent .slideBottom {
+  transition: all 2s;
+  padding-top: 40px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  height: 100%;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+}
+.loginContent .slideTop .container,
+.loginContent .slideBottom .container {
+  padding: 1rem;
+}
+.loginContent .slideTop .greeting,
+.loginContent .slideBottom .greeting {
+  position: relative;
+  left: 0;
+  min-width: 200%;
+  display: flex;
+  flex-wrap: nowrap;
+  height: fit-content;
+}
+.loginContent .slideTop .container .signIn,
+.loginContent .slideTop .container .signUp,
+.loginContent .slideBottom .greeting .signIn,
+.loginContent .slideBottom .greeting .signUp {
+  width: 100%;
+  overflow: hidden;
+  transition: all 2s;
+}
+
+/*  */
+.loginContent .slideTop {
+  background-color: var(--primary-color);
+  background-image: var(--backgroundImage);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 40%;
+  right: 60%;
+  z-index: 1;
+}
+.loginContent.switch .slideTop {
+  right: 0;
+  background-color: var(--secondary-color);
+}
+.loginContent .slideTop .overlay {
+  background-color: inherit;
+}
+.loginContent .slideTop .greeting {
+  transition: all 2s;
+}
+.loginContent.switch .slideTop .greeting {
+  left: -100%;
+}
+.loginContent .slideTop .container .signIn,
+.loginContent .slideTop .container .signUp {
+  width: 100%;
+  overflow: hidden;
+  transition: all 2s;
+}
+.loginContent .slideTop .greeting .signIn,
+.loginContent .slideTop .greeting .signUp {
+  opacity: 0;
+  transition: all 0.1s;
+  transition-delay: 0.6s;
+  width: 100%;
+}
+.loginContent .slideTop .greeting .signIn {
+  opacity: 1;
+  transition-delay: 0.4s;
+}
+.loginContent.switch .slideTop .greeting .signIn {
+  opacity: 0;
+  transition-delay: 0.6s;
+}
+.loginContent .slideTop .greeting .signUp {
+  transition-delay: 0.6s;
+}
+.loginContent.switch .slideTop .greeting .signUp {
+  opacity: 1;
+  transition-delay: 0.4s;
+}
+.loginContent .slideTop .button {
+  background-color: var(--clear);
+  border-color: var(--light);
+}
+.loginContent .slideTop .button::before,
+.loginContent.switch .slideTop .button::before {
+  content: 'sign up';
+  position: relative;
+  transform: content 2s;
+}
+.loginContent.switch .slideTop .button::before {
+  content: 'sign in';
+}
+
+/*  */
+.loginContent .slideBottom {
+  position: absolute;
+  color: var(--primary-color);
+  width: 60%;
+  margin: 0;
+  right: 0;
+}
+.loginContent.switch .slideBottom {
+  right: 40%;
+}
+.loginContent .slideBottom .greeting {
+  transition: all 1.5s;
+}
+.loginContent.switch .slideBottom .greeting {
+  left: -100%;
+}
+.loginContent .slideBottom .greeting .signIn,
+.loginContent .slideBottom .greeting .signUp {
+  transition: all 0.1s;
+}
+.loginContent .slideBottom .greeting .signIn {
+  opacity: 1;
+  transition-delay: 0.7s;
+}
+.loginContent.switch .slideBottom .greeting .signIn {
+  opacity: 0;
+  transition-delay: 0.4s;
+}
+.loginContent .slideBottom .greeting .signUp {
+  opacity: 0;
+  transition-delay: 0.4s;
+  color: var(--secondary-color);
+}
+.loginContent.switch .slideBottom .greeting .signUp {
+  opacity: 1;
+  transition-delay: 0.7s;
+}
+.loginContent .slideBottom .button {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  color: var(--light);
+}
+.loginContent .slideBottom .greeting .signIn .button {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+.loginContent .slideBottom .greeting .signUp .button {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+/*  */
+/* Extra small devices (portrait phones, less than 576px) */
+/* No media query for `xs` since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 576px and up) */
+/* @media (min-width: 576px) {
+} */
+
+/* Medium devices (tablets, 768px and up) */
+/* @media (min-width: 768px) {
+} */
+
+/* Large devices (desktops, 992px and up) */
+/* @media (min-width: 992px) {
+} */
+
+ /* Extra large devices (large desktops, 1200px and up) */
+/* @media (min-width: 1200px) {
+} */
+
+
+/*  */
+/* // Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { ... }
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... } */
